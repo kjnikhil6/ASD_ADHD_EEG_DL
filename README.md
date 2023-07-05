@@ -1,10 +1,11 @@
 # CLASSIFICATION OF AUTISM AND ADHD USING EEG BASED ON DEEP LEARNING
 
 ## PRINCIPLE INVESTIGATORS:
-- Arun J Dev
-- Femina N
 - Nikhil K J
+- Femina N
 - Chithira M
+- Arun J Dev
+
 
 ## INTRODUCTION
 - ASD and ADHD are two common neurodevelopmental disorders that affect millions of individuals worldwide.
