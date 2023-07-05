@@ -1,14 +1,4 @@
-﻿<a name="br1"></a> 
 
-**APJ Abdul Kalam Technological**
-
-**University**
-
-Government Engineering College, Palakkad
-
-Department of
-
-Electronics and Communication Engineering
 
 **CLASSIFICATION OF AUTISM AND ADHD USING**
 
@@ -34,11 +24,6 @@ Nikhil K J
 
 Chithira M
 
-1
-
-
-
-<a name="br2"></a> 
 
 INTRODUCTION
 
@@ -59,9 +44,6 @@ which is critical for early intervention and improving outcomes for individuals 
 conditions.
 
 
-
-<a name="br3"></a> 
-
 CURRENT PRACTICES IN DIAGNOSIS
 
 • ASD diagnosis involves a comprehensive assessment of an individual's behavioral,
@@ -76,11 +58,6 @@ cognitive, and developmental functioning.
 
 time-consuming and require trained professionals.
 
-3
-
-
-
-<a name="br4"></a> 
 
 PROBLEM STATEMENT
 
@@ -101,9 +78,6 @@ disorders at an early stage of life.
 ADHD, as well as comorbid conditions.
 
 
-
-<a name="br5"></a> 
-
 OBJECTIVE
 
 • To select an alternative method for the detection of neurological disorder by performing
@@ -120,21 +94,8 @@ classification of ASD and ADHD.
 
 project aims to change this through an innovative AI-based classification system.
 
-5
 
 
-
-<a name="br6"></a> 
-
-BACKGROUND STUDY
-
-“Global prevalence of autism: A systematic review update” a review article by Jinan etal. [8]
-
-reviewed studies of the prevalence of autism worldwide, considering the impact of geographic,
-
-ethnic, and socioeconomic factors on prevalence estimates. Approximately 1/100 children are
-
-diagnosed with autism spectrum disorder around the world.
 
 In the article “ADHD and learning disabilities: Research findings and clinical implications” by
 
@@ -151,50 +112,7 @@ ADHD also have LDs, although estimates vary widely depending on the criteria use
 LDs.
 
 
-
-<a name="br7"></a> 
-
-BACKGROUND STUDY
-
-"Automated EEG-Based Diagnosis of Attention Deficit Hyperactivity Disorder (ADHD)" by M.
-
-Arns et al. [10]: The paper proposes an automated EEG-based diagnostic system for ADHD
-
-using a machine learning algorithm. The authors used EEG data from 102 children with ADHD
-
-and 102 controls to train and test the algorithm. The results show that the algorithm achieved an
-
-accuracy of 89% in classifying ADHD patients from controls.
-
-"EEG-Based Diagnosis of Autism Spectrum Disorder (ASD) Using Machine Learning
-
-Techniques" by G. Ramaswamy et al. [11]: The study presents an EEG-based diagnostic system
-
-for ASD using machine learning techniques. The authors used EEG data from 28 children with
-
-ASD and 28 controls to train and test the algorithm. The results show that the algorithm achieved
-
-an accuracy of 92% in diagnosing ASD patients from controls.
-
-"EEG-Based Classification of Learning Disabilities" by T. Adalı et al. [12]: The paper presents an
-
-EEG-based classification system for learning disabilities. The authors used EEG data from 58
-
-children with learning disabilities and 58 controls to train and test the algorithm. The results show
-
-that the algorithm achieved an accuracy of 84% in classifying learning disability patients from
-
-controls.
-
-
-
-<a name="br8"></a> 
-
 METHODOLOGY
-
-
-
-<a name="br9"></a> 
 
 PRE-PROCESSING
 
@@ -220,8 +138,6 @@ analysis.
 
 
 
-<a name="br10"></a> 
-
 MNE-PYTHON
 
 • MNE-Python is a Python-based software package for analyzing EEG and
@@ -242,9 +158,7 @@ further analysis.
 
 
 
-<a name="br11"></a> 
-
-D ATA SEGMENTATION
+DATA SEGMENTATION
 
 • As much as more training samples be available, machine
 
@@ -264,9 +178,9 @@ o Much easier for the deep learning model to learn the
 
 relevant patterns in the data.
 
-• Will use **Hanning Window** to split the samples into 4-second
+• Will use **Hanning Window** to split the samples into 1-second
 
-segments with 75% overlap which makes the numbers of samples
+segments with 50% overlap which makes the numbers of samples
 
 will be increased about 27 times for the proposed method.[1]
 
@@ -274,9 +188,23 @@ will be increased about 27 times for the proposed method.[1]
 
 Python, EEGLAB
 
+DATASETS
 
+•The datasets received
 
-<a name="br12"></a> 
+from ICCONS includes 16
+
+pure ASD and pure ADHD
+
+signals of Childrens between
+
+age group of 2-10 years.
+
+• Each signals consists
+
+of 21 channels and are sampled
+
+at 250Hz.
 
 DEEP LEARNING
 
@@ -296,23 +224,9 @@ network architectures
 
 can classify most of the complex relationships.
 
-12
+ 
 
-
-
-<a name="br13"></a> 
-
-DEEP LEARNING WORKFLOW
-
-13
-
-
-
-<a name="br14"></a> 
-
-TRAIN TEST
-
-SPLIT
+TRAIN TEST SPLIT
 
 • The dataset consisted of EEG recordings from
 
@@ -342,225 +256,15 @@ model's performance on new data.
 
 
 
-<a name="br15"></a> 
 
-CONVOLUTIONAL NEURAL NETWORK
 
-• CNN takes an image as input and extracts features of the image using convolution
 
-and pooling layers.
 
-• Extracted features are fed into flattening and fully-connected layers for
 
-classification.
 
-• CNN helps to achieve
 
-high accuracy in EEG
 
-classification tasks.
 
-• Training on a large
 
-dataset of EEG images
 
-helps to learn the
-
-complex relationships
-
-between different
-
-frequency bands and
-
-EEG signals.
-
-
-
-<a name="br16"></a> 
-
-CNN MODEL ARCHITECTURE
-
-
-
-<a name="br17"></a> 
-
-5-FOLD CROSS-VALIDATION FOR
-
-DEEP LEARNING
-
-• Helps to prevent overfitting in deep learning
-
-models.
-
-• Data is divided into 5 equally sized folds.
-
-• Model is trained on 4 folds and evaluated on
-
-the remaining fold.
-
-• Process is repeated 5 times with a different
-
-fold held out each time.
-
-• Results are averaged for a final estimate of
-
-the model's performance.
-
-
-
-<a name="br18"></a> 
-
-DATASETS
-
-•The datasets received
-
-from ICCONS includes 16
-
-pure ASD and pure ADHD
-
-signals of Childrens between
-
-age group of 2-10 years.
-
-• Each signals consists
-
-of 21 channels and are sampled
-
-at 250Hz.
-
-
-
-<a name="br19"></a> 
-
-PSD OF RAW EEG D ATA
-
-• Power spectral density visualizes EEG frequency content and helps identify
-
-frequency bands of interest (e.g. alpha, beta, theta) or any data artifacts.
-
-Raw PSD data
-
-Filtered PSD data
-
-
-
-<a name="br20"></a> 
-
-HANNING WINDOW
-
-• A Hanning window is a type of window function
-
-commonly used in digital signal processing to
-
-reduce spectral leakage when analysing a finite
-
-segment of a longer signal, and can help improve
-
-the accuracy of frequency analysis by reducing
-
-spectral leakage and smoothing the signal at
-
-segment edges.
-
-• The Hanning window is a type of cosine-based
-
-window function that is defined by the formula:
-
-w(n) = 0.5 - 0.5*cos(2*pi\*n/N)
-
-
-
-<a name="br21"></a> 
-
-REFERENCE
-
-[1] Moghaddari, M., Lighvan, M. Z., & Danishvar, S. (2020). Diagnose ADHD disorder in
-
-children using convolutional neural network based on continuous mental task EEG.
-
-*Computer Methods and Programs in Biomedicine, 197*, Article 105738. <https://doi.org/>
-
-10\.1016/j.cmpb.2020.105738
-
-[2] Akhtar, M. T. , Mitsuhashi, W., & James, C. J. (2012). Employing spatially constrained ICA
-
-and wavelet denoising, for automatic removal of artifacts from multichannel EEG data.
-
-Signal processing, 92(2), 401-416.
-
-[3] Uyulan, C., Ergüzel, T. T. , Unubol, H., Cebi, M., Sayar, G. H., Nezhad Asad, M., & Tarhan,
-
-N. (2021). Major depressive disorder classification based on different convolutional neural
-
-network models: Deep learning approach. *Clinical EEG and Neuroscience, 52*(1), 38–51.
-
-<https://doi.org/10.1177/1550059420916634>[,](https://doi.org/10.1177/1550059420916634)[ ](https://doi.org/10.1177/1550059420916634)[1550059420916634.](https://doi.org/10.1177/1550059420916634)
-
-[4] Saby, J. N., & Marshall, P. J. (2012). The utility of EEG band Power Analysis in the study
-
-of infancy and early childhood. *Developmental Neuropsychology*, *37*(3), 253–273.
-
-<https://doi.org/10.1080/87565641.2011.614663>
-
-
-
-<a name="br22"></a> 
-
-REFERENCE
-
-[5] Bi, X., & Wang, H. (2019). Early Alzheimer’s disease diagnosis based on EEG
-
-spectral images using deep learning. *Neural Networks: The Official Journal of the*
-
-*International Neural Network Society, 114*, 119–135. <https://doi.org/10.1016/j>.
-
-neunet.2019.02.005
-
-[6] Chen, H., Song, Y. , & Li, X. (2019a). A deep learning framework for identifying
-
-children with ADHD using an EEG-based brain network. *Neurocomputing, 356*, 83–96.
-
-https:// doi.org/10.1016/j.neucom.2019.04.058. Scopus.
-
-[7] "Makoto’s preprocessing pipeline." https://sccn.ucsd.edu/wiki/Makoto’s \_
-
-preprocessing \_ pipeline
-
-[8] Zeidan J, Fombonne E, Scorah J, Ibrahim A, Durkin MS, Saxena S, Yusuf A, Shih A,
-
-Elsabbagh M. Global prevalence of autism: A systematic review update. Autism Res.
-
-2022 May;15(5):778-790. doi: 10.1002/aur.2696. Epub 2022 Mar 3. PMID: 35238171;
-
-PMCID: PMC9310578.
-
-
-
-<a name="br23"></a> 
-
-REFERENCE
-
-[9] DuPaul, George & Volpe, Robert. (2009). ADHD and learning disabilities: Research
-
-findings and clinical implications. Current Attention Disorders Reports. 1. 152-155.
-
-10\.1007/s12618-009-0021-4.
-
-[10] Arns, M., Conners, C. K., & Kraemer, H. C. (2013). Automated EEG-based diagnosis of
-
-attention deficit hyperactivity disorder: A multi-site validation study. Clinical EEG and
-
-neuroscience, 44(4), 288-297.
-
-[11] G. Ramaswamy et al., "EEG-Based Diagnosis of Autism Spectrum Disorder (ASD)
-
-Using Machine Learning Techniques," Journal of Autism and Developmental Disorders, vol.
-
-47, no. 10, pp. 3345-3355, Oct. 2017
-
-[12] Adalı, T. , Anderson, C., Pierce, D., & Barbour, R. (2015). EEG-Based Classification of
-
-Learning Disabilities. IEEE Transactions on Neural Systems and Rehabilitation Engineering,
-
-23(6), 1027-1035. doi: 10.1109/TNSRE.2015.2421985
 
