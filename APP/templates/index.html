@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TEAMS</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="{{url_for('static',filename='font.css')}}" rel="stylesheet">
+
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="{{url_for('static',filename='boot.css')}}" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static',filename='aos/aos.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static',filename='style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Arsha
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html"> DL MODEL</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+        </ul>
+          <li><a class="getstarted scrollto" href="#about">TEST</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>CLASSIFICATION OF ASD AND ADHD</h1>
+          <h2>We are team of college students making DL model to classify ASD and ADHD</h2>
+
+          <div><h2>Upload file for testing</h2>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+              <form action="{{url_for('home')}}" method="POST" enctype="multipart/form-data">
+                <input type="file" id="image" class="custom-file-input" name="image"><br>
+                <input type="submit" class="btn-get-started" value="TEST">
+              </form>
+                    {% if label %}
+                    <p>The image contains a {{ label }}.</p>
+                    <a href="/">Back to form</a>
+                    {% endif %}
+          </div>
+          </div>
+          
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{{url_for('static',filename='hero-img.png')}}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+   
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              This study aims to develop an AI system for the classification of neurological disorders using EEG
+signals. The disorders include Attention Deficit Hyperactivity Disorder (ADHD) and autism. The system
+is based on deep learning techniques and utilizes a Convolutional Neural Network (CNN) as the main
+classifier. The EEG data is preprocessed and filtered and segmented into appropriate segments before
+being inputted into the CNN network. 
+            </p>
+            
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              The results of the classification process are used to determine the
+presence of ADHD or ASD and the associated severity. The proposed system has the potential to provide
+a non-invasive, reliable and efficient method for the classification of ADHD and ASD, and can be useful
+for medical professionals and researchers in the field
+            </p>
+            <a href="#" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="{{url_for('static',filename='img/NIKi.jpg')}}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>NIKHIL KJ</h4>
+                <span>Member 1</span>
+                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="{{url_for('static',filename='img/FEMI.jpg')}}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>FEMINA N</h4>
+                <span>Member 2</span>
+                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="{{url_for('static',filename='img/chi.jpg')}}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>CHITHIRA M</h4>
+                <span>Member 3/<span>
+                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="{{url_for('static',filename='img/ARUN.jpg')}}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>ARUN J DEV</h4>
+                <span>Member 4</span>
+                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    
+
+  
+      
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{url_for('static',filename='aos/aos.js')}}"></script>
+  <script src="{{url_for('static',filename='bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{url_for('static',filename='isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{url_for('static',filename='swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='waypoints/noframework.waypoints.js')}}"></script>
+  <script src="{{url_for('static',filename='php-email-form/validate.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{url_for('static',filename='main.js')}}"></script>
+
+</body>
+
+</html>

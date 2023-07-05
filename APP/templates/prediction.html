@@ -1,0 +1,168 @@
+<!--
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: #37517e;
+    }
+    
+</style>
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+        <h1>Accuracy<br> CAT: <span>{{data}}</span> <br>DOG: <span>{{data}}</span><br> 
+
+        
+
+        
+    </h1>{% if data > 0.60 %}
+    <h1> It looks like Autism</h1>
+
+    {%else%}
+    <h1> It looks like ADHD</h1>
+    {%endif%}
+        <a href="/" class='btn'>go back</a>
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"></a>
+            
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DL Model Result</title>
+	<style>
+		body {
+			background-color: #37517e;
+			color: #fff;
+			font-family: Arial, sans-serif;
+		}
+		
+		#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #37517e;
+  }
+  
+  #preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #37517e;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1s linear infinite;
+  }
+  
+  @keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+		
+		.result-container {
+			margin-top: 100px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			height: 300px;
+		}
+		
+		.result-image {
+			width: 300px;
+			height: 300px;
+			object-fit: contain;
+			margin-bottom: 20px;
+			animation: fadeIn 1s;
+		}
+
+		@keyframes fadeIn {
+			from { opacity: 0; }
+			to { opacity: 1; }
+		}
+		
+		.result-label {
+			font-size: 24px;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 20px;
+			animation: fadeIn 1s;
+		}
+	</style>
+</head>
+<body>
+	<div id="preloader"></div>
+	<div class="result-container" style="display: none;">
+        <h1>Accuracy<br> Autism: <span>{{1-data}}</span> <br>ADHD: <span>{{data}}</span><br>     
+        </h1>{% if data > 0.60 %}
+        <h1> It looks like ADHD</h1>
+        {%else%}
+        <h1> It looks like ASD </h1>
+        {%endif%}
+		
+		<div class="result-label"></div>
+	</div>
+    <script src="{{url_for('static',filename='aos/aos.js')}}"></script>
+    <script src="{{url_for('static',filename='bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static',filename='glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{url_for('static',filename='isotope-layout/isotope.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static',filename='swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{url_for('static',filename='waypoints/noframework.waypoints.js')}}"></script>
+    
+	<script>
+		// Wait for page to load
+		window.onload = function() {
+			// Hide loader
+			document.querySelector('#preloader').style.display = 'none';
+			
+			// Show result container
+			document.querySelector('.result-container').style.display = 'flex';
+			
+			// Get image URL from query string
+			const params = new URLSearchParams(window.location.search);
+			const imageUrl = params.get('image');
+			
+			// Update image source
+			const image = document.querySelector('.result-image');
+			image.src = imageUrl;
+			
+			// Get prediction label from query string
+			const label = params.get('label');
+			
+			// Update label text
+			const labelEl = document.querySelector('.result-label');
+			labelEl.textContent = label;
+		}
+	</script>
+</body>
+</html>
